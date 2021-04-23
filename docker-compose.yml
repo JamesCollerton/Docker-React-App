@@ -2,10 +2,10 @@ version: '3.7'
 
 services:
 
-  my-app:
-    container_name: my-app
+  react-eks-app:
+    container_name: react-eks-app
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - '1337:80'
+      - '80:80'
