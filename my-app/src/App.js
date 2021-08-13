@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This is our example AWS EKS application!
+          This is our example AWS EKS/ ECS application!
         </p>
       </header>
     </div>
