@@ -3,7 +3,7 @@
 
 # This is the base image. We want to build our own
 # image on top of this.
-FROM node:15.14.0-alpine3.10 as build
+FROM bitnami/node as build
 
 # We set the container working directory to my-app
 WORKDIR /my-app
@@ -29,7 +29,7 @@ RUN npm run build
 
 # This is the base image we want to use for our production
 # build
-FROM nginx:stable-alpine
+FROM public.ecr.aws/nginx/nginx
 
 # Copy the built files onto our image
 COPY --from=build /my-app/build /usr/share/nginx/html
