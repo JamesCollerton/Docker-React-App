@@ -3,7 +3,7 @@
 
 # This is the base image. We want to build our own
 # image on top of this.
-FROM bitnami/node as build
+FROM bitnami/node:14.21.1 as build
 
 # We set the container working directory to my-app
 WORKDIR /my-app
